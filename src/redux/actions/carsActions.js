@@ -21,7 +21,7 @@ export const addCar=(reqObj)=>async dispatch=>{
     dispatch({type: 'LOADING' , payload:true})
 
     try {
-         await axios.post('http://localhost:3000/cars/addcar' , reqObj)
+         await axios.post('https://modern-rental-cars.herokuapp.com/cars/addcar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
          message.success('New car added successfully')
@@ -41,7 +41,7 @@ export const editCar=(reqObj)=>async dispatch=>{
     dispatch({type: 'LOADING' , payload:true})
 
     try {
-         await axios.post('http://localhost:3000/cars/editcar' , reqObj)
+         await axios.post('https://modern-rental-cars.herokuapp.com/cars/editcar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
          message.success('Car details updated successfully')
@@ -61,7 +61,7 @@ export const deleteCar=(reqObj)=>async dispatch=>{
     dispatch({type: 'LOADING' , payload:true})
 
     try {
-         await axios.post('http://localhost:3000/cars/deletecar' , reqObj)
+         await axios.post('https://modern-rental-cars.herokuapp.com/cars/deletecar' , reqObj)
        
          dispatch({type: 'LOADING' , payload:false})
          message.success('Car deleted successfully')
